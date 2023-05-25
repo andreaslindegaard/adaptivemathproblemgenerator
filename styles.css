@@ -1,43 +1,108 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
+  margin: 0;
   background-color: #f0f0f0;
 }
 
 #app {
-  text-align: center;
-  max-width: 600px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   padding: 20px;
-  border-radius: 5px;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 20px;
 }
 
-#problem {
+#calculator {
+  width: 300px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+#calculator h1 {
+  text-align: center;
   font-size: 24px;
-  margin: 20px 0;
+  margin-top: 0;
 }
 
-#answer-form {
-  margin: 20px 0;
+#calculator #display {
+  height: 50px;
+  background-color: #fff;
+  color: #000;
+  text-align: right;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
 }
 
-#answer {
+#calculator .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+#calculator button {
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  padding: 20px;
   font-size: 18px;
-  padding: 5px;
+  color: #000;
+  cursor: pointer;
 }
 
-button {
-  font-size: 18px;
-  padding: 5px 10px;
+#calculator button:hover {
+  background-color: #d3d3d3;
 }
 
-#message {
+#calculator button:active {
+  background-color: #bfbfbf;
+}
+
+#calculator button.operator {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+#calculator button.operator:hover {
+  background-color: #f57c00;
+}
+
+#calculator button.operator:active {
+  background-color: #e65100;
+}
+
+#calculator button#equals {
+  grid-column: span 2;
+}
+
+#calculator button#zero {
+  grid-column: span 2;
+  text-align: left;
+  padding-left: 30px;
+}
+
+#app input,
+#app button {
+  padding: 10px;
+  margin: 10px;
   font-size: 18px;
-  color: red;
+}
+
+#app button {
+  background-color: #009879;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#app p {
+  font-size: 18px;
+  text-align: center;
 }
